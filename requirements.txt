@@ -3,7 +3,7 @@ gunicorn
 psycopg2-binary
 dj-database-url
 whitenoise
- HEAD
+
 
 mysqlclient
- 5e334a7438e731de500de19a5850d96a26535185
+
