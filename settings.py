@@ -26,7 +26,13 @@ SECRET_KEY = 'django-insecure-pqf3c&0un&lkag%lym#-bb8&%l&-h&)mlg1)p=@945$p4+pq3+
 
 
 import os
+
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+
+# Render.com any subdomain ah automatic ah allowed
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 
 # Application definition
